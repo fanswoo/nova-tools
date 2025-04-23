@@ -1,0 +1,54 @@
+{
+  "extends": "@fanswoo/workspace-environment/tsconfig.default.json",
+  "compilerOptions": {
+    "outDir": "public",
+    "baseUrl": "./",
+    "typeRoots": [
+      "../resources/script/shims",
+      "./node_modules/@fanswoo/core/src/bootstrap",
+      "./node_modules/vue/types",
+      "./node_modules/vue-router/types",
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@fanswoo/core/*": [
+        "./node_modules/@fanswoo/core/src/*"
+      ],
+      "@fanswoo/ajax-submit/*": [
+        "./node_modules/@fanswoo/ajax-submit/src/*"
+      ],
+      "@fanswoo/component-loader/*": [
+        "./node_modules/@fanswoo/component-loader/src/*"
+      ],
+      "@fanswoo/control-center/*": [
+        "node_modules/@fanswoo/control-center/src/*"
+      ],
+      "@fanswoo/controller/*": [
+        "./node_modules/@fanswoo/controller/src/*"
+      ],
+      "@fanswoo/embed/*": [
+        "./node_modules/@fanswoo/embed/src/*"
+      ],
+      "@fanswoo/touch/*": [
+        "./node_modules/@fanswoo/touch/src/*"
+      ],
+      "@fanswoo/message/*": [
+        "./node_modules/@fanswoo/message/src/*"
+      ],
+      "@fanswoo/shop/*": [
+        "./node_modules/@fanswoo/shop/src/*"
+      ],
+      "@fanswoo/html-editor/*": [
+        "./node_modules/@fanswoo/html-editor/src/*"
+      ]
+    }
+  },
+  "include": [
+    "./resources/script/**/*",
+    "./node_modules/@fanswoo/**/*"
+  ],
+  "exclude": [
+    "./node_modules/@fanswoo/workspace-environment",
+    "./node_modules/@fanswoo/package-manager"
+  ]
+}

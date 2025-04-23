@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "production": "vite build --minify true"
+  },
+  "devDependencies": {
+    "laravel-nova-devtool": "file:../vendor/laravel/nova-devtool",
+    "lodash": "^4.17.21",
+    "@fanswoo/workspace-environment": "file:../storage/npm-packages/workspace-environment"
+  }
+}
