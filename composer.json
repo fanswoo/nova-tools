@@ -1,15 +1,15 @@
 {
   "name": "fanswoo/nova-tools",
-  "description": "fanswoo attachment",
+  "description": "fanswoo nova tools",
   "type": "library",
   "authors": [
     {
-      "name": "fansWoo",
+      "name": "fanswoo",
       "email": "service@fanswoo.com"
     }
   ],
   "keywords": [
-    "attachment",
+    "nova tools",
     "fanswoo"
   ],
   "homepage": "https://fanswoo.com",
@@ -23,13 +23,13 @@
   },
   "autoload": {
     "psr-4": {
-      "FF\\FilamentTools\\": "./src/"
+      "FF\\NovaTools\\": "./src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "FF\\FilamentTools\\FilamentTools\\FilamentToolsProvider"
+        "FF\\NovaTools\\Core\\NovaToolsProvider"
       ]
     }
   }
