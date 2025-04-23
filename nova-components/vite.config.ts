@@ -128,7 +128,9 @@ export default defineConfig({
         '../node_modules/@fanswoo/editor/src',
       ),
       'vue': 'vue/dist/vue.esm-bundler.js',
+      // 'laravel-nova': '/../vendor/laravel/nova/resources/js/mixins/packages.js',
       '@': '/../vendor/laravel/nova/resources/js',
+      '@resources': path.resolve(__dirname, '/resources'),
     },
   },
 });

@@ -1,8 +1,8 @@
 <?php
 
-namespace Fields\HtmlEditor;
+namespace FF\NovaTools\Fields\HtmlEditor;
 
-use FF\Nova\Core\Fields\SupportRelationshipStore;
+use FF\NovaTools\Core\Fields\SupportRelationshipStore;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\SupportsDependentFields;
 

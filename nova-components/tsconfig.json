@@ -2,13 +2,13 @@
   "extends": "@fanswoo/workspace-environment/tsconfig.default.json",
   "compilerOptions": {
     "outDir": "public",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "typeRoots": [
       "../resources/script/shims",
       "./node_modules/@fanswoo/core/src/bootstrap",
       "./node_modules/vue/types",
       "./node_modules/vue-router/types",
-      "./node_modules/@types"
+      "./node_modules/@types",
     ],
     "paths": {
       "@fanswoo/core/*": [
@@ -40,7 +40,7 @@
       ],
       "@fanswoo/html-editor/*": [
         "./node_modules/@fanswoo/html-editor/src/*"
-      ]
+      ],
     }
   },
   "include": [

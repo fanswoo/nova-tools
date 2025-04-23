@@ -19,9 +19,9 @@ import DetailDateTimeField from './resources/fields/date-time/detail-field.vue';
 import FormDateTimeField from './resources/fields/date-time/form-field.vue';
 import FormGroupBooleanField from './resources/fields/boolean-group/form-field.vue';
 import FormMorphTagField from './resources/fields/morph-tag/form-field.vue';
+import FormHasManyButton from './resources/fields/has-many-button/form-field.vue';
 import DetailMorphTagField from '@/fields/Detail/TagField.vue';
 import IndexMorphTagField from '@/fields/Index/TagField.vue';
-import FormHasManyButton from './resources/fields/has-many-button/form-field.vue';
 import DetailHasManyButton from '@/fields/Detail/TagField.vue';
 import IndexHasManyButton from '@/fields/Index/TagField.vue';
 import FormCustomField from './resources/layouts/fields/custom-field/form-field.vue';
@@ -37,16 +37,16 @@ Nova.booting((app, store) => {
   app.use(VueViewer);
   app.use(setupCalendar);
 });
-
+// //
 Nova.booting((app, store) => {
   app.component('index-id-field', IndexIdField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('index-url-field', IndexUrlField);
   app.component('detail-url-field', DetailUrlField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('index-display-field', IndexDisplayField);
   app.component('detail-display-field', DetailDisplayField);
@@ -57,7 +57,7 @@ Nova.booting((app, store) => {
   app.component('index-pic-field', IndexPicField);
   app.component('detail-pic-field', DetailPicField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('index-relation-pic-field', IndexRelationPicField);
   app.component('detail-relation-pic-field', DetailRelationPicField);
@@ -68,7 +68,7 @@ Nova.booting((app, store) => {
   app.component('detail-relation-file-field', DetailRelationFileField);
   app.component('form-relation-file-field', FormRelationFileField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('form-html-editor-field', FormHtmlEditorField);
 });
@@ -78,11 +78,11 @@ Nova.booting((app, store) => {
   app.component('detail-date-time-field', DetailDateTimeField);
   app.component('form-date-time-field', FormDateTimeField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('form-boolean-group-field', FormGroupBooleanField);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('form-morph-tag-field', FormMorphTagField);
   app.component('detail-morph-tag-field', DetailMorphTagField);
@@ -91,7 +91,7 @@ Nova.booting((app, store) => {
   app.component('detail-has-many-button', DetailHasManyButton);
   app.component('index-has-many-button', IndexHasManyButton);
 });
-
+//
 Nova.booting((app, store) => {
   app.component('form-custom-field', FormCustomField);
 });

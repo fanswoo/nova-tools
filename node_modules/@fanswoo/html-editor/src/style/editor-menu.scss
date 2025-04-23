@@ -1,0 +1,333 @@
+$color-blue: #027de5;
+
+.editor-menu {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  top: 0;
+  z-index: 1;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  .button-group {
+    display: flex;
+  }
+  button {
+    display: block;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    transition-property: outline, background;
+    outline: 2px solid rgba(0, 0, 0, 0);
+    &:hover {
+      background: #ddd;
+    }
+    &.is-active {
+      background: #ccc;
+    }
+    &:focus {
+      outline: 2px solid $color-blue;
+    }
+  }
+  .separator {
+    width: 1px;
+    background: #ddd;
+    margin-right: 5px;
+    height: 25px;
+    &.is-first-item {
+      display: none;
+    }
+  }
+  .highlight-toggle-button {
+    position: relative;
+    .highlight-panel {
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      padding: 5px 0 5px 5px;
+      flex-wrap: wrap;
+      width: 134px;
+      &.is-open {
+        display: flex;
+      }
+      button {
+        margin-bottom: 5px;
+      }
+      .unset-color-button,
+      .select-color-button {
+        height: 25px;
+        cursor: pointer;
+      }
+      .unset-color-button {
+        width: 60px;
+      }
+      .select-color-button {
+        width: 55px;
+      }
+      .highlight-button {
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s;
+        border: 1px #fff solid;
+        &.has-border {
+          border: 1px #ccc solid;
+        }
+        &:hover {
+          outline: $color-blue solid 2px;
+          box-shadow: inset 0 0 0 1px #fff;
+          border: 1px #fff solid;
+        }
+        &.is-active {
+          outline: #000 solid 2px;
+          box-shadow: inset 0 0 0 1px #fff;
+          border: 1px #fff solid;
+          &:hover {
+            outline: $color-blue solid 2px;
+          }
+        }
+        svg {
+          margin-left: -3px;
+          margin-top: 2px;
+        }
+        &.has-white-tick {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .paragraph-toggle-button {
+    position: relative;
+    button {
+      width: 80px;
+      text-align: left;
+      .fa-caret-down {
+        float: right;
+        height: 20px;
+      }
+    }
+    .toggle-button {
+      &.fade-out {
+        color: #999;
+      }
+    }
+    .paragraph-panel {
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      &.is-open {
+        display: block;
+      }
+      .paragraph-button {
+        background: none;
+        margin-bottom: 2px;
+        margin-right: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:hover {
+          background: #ddd;
+        }
+        &.is-active {
+          background: $color-blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .table-toggle-button {
+    position: relative;
+    .table-panel {
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      padding: 5px 0 5px 5px;
+
+      &.is-open {
+        display: block;
+      }
+
+      .table-cell-shown {
+        flex-wrap: wrap;
+        display: flex;
+        width: 143px;
+        .table-cell-button {
+          width: 12px;
+          height: 12px;
+          padding: 0;
+          transition: all 0.3s;
+          border: 2px #ddd solid;
+          background: #fff;
+          margin: 0 2px 2px 0;
+          &.is-active {
+            background: $color-blue;
+            border: 2px $color-blue solid;
+          }
+        }
+      }
+      .table-fields-shown {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .text-align-toggle-button {
+    position: relative;
+    .text-align-panel {
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      padding: 5px;
+      &.is-open {
+        display: flex;
+      }
+      .text-align-button {
+        //background: none;
+        //margin-bottom: 2px;
+        //margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+        //&.is-active {
+        //  background: $color-blue;
+        //  color: #fff;
+        //}
+      }
+    }
+  }
+
+  .font-size-toggle-button {
+    position: relative;
+    .font-size-panel {
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      width: 70px;
+      &.is-open {
+        display: block;
+      }
+      .font-size-button {
+        text-align: left;
+        background: none;
+        margin-bottom: 2px;
+        margin-right: 0;
+        width: 100%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:hover {
+          background: #ddd;
+        }
+        &.is-active {
+          background: $color-blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .color-toggle-button {
+    position: relative;
+    .color-panel {
+      width: 132px;
+      position: absolute;
+      display: none;
+      background: #fff;
+      z-index: 9999;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      margin-top: 2px;
+      padding: 5px 0 5px 5px;
+      flex-wrap: wrap;
+      &.is-open {
+        display: flex;
+      }
+      button {
+        margin-bottom: 5px;
+      }
+      .unset-color-button,
+      .select-color-button {
+        height: 25px;
+        cursor: pointer;
+      }
+      .unset-color-button {
+        width: 60px;
+      }
+      .select-color-button {
+        width: 55px;
+      }
+      .color-button {
+        width: 20px;
+        height: 20px;
+        transition: all 0.3s;
+        border: 1px #fff solid;
+        &.has-border {
+          border: 1px #ccc solid;
+        }
+        &:hover {
+          outline: $color-blue solid 2px;
+          box-shadow: inset 0 0 0 1px #fff;
+          border: 1px #fff solid;
+        }
+        &.is-active {
+          outline: #000 solid 2px;
+          box-shadow: inset 0 0 0 1px #fff;
+          border: 1px #fff solid;
+          &:hover {
+            outline: $color-blue solid 2px;
+          }
+        }
+        svg {
+          margin-left: -3px;
+          margin-top: 2px;
+        }
+        &.has-white-tick {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.tippy-box[data-animation=fade][data-state=hidden] {
+  opacity: 0
+}
+
+[data-tippy-root] {
+  .tippy-box[data-theme~='tooltip'] {
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+}

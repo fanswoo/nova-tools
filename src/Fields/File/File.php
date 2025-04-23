@@ -1,6 +1,6 @@
 <?php
 
-namespace Fields\File;
+namespace FF\NovaTools\Fields\File;
 
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\SupportsDependentFields;
