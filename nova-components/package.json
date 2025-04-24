@@ -8,11 +8,16 @@
     "nova:install": "npm --prefix='../vendor/laravel/nova' ci"
   },
   "dependencies": {
+    "@fanswoo/core": "file:npm-packages/core",
+    "@fanswoo/html-editor": "file:npm-packages/html-editor",
+    "@fanswoo/controller": "file:npm-packages/controller",
+    "@fanswoo/embed": "file:npm-packages/embed",
+    "@fanswoo/message": "file:npm-packages/message",
     "vue-chartjs": "^5.3.1"
   },
   "devDependencies": {
+    "@fanswoo/workspace-environment": "file:npm-packages/workspace-environment",
     "laravel-nova-devtool": "file:../vendor/laravel/nova-devtool",
-    "lodash": "^4.17.21",
-    "@fanswoo/workspace-environment": "*"
+    "lodash": "^4.17.21"
   }
 }

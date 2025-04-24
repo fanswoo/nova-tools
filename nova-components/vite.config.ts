@@ -33,6 +33,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "main.js"),
       name: "field",
+      cssFileName: "style",
       formats: ["umd"],
       fileName: () => "main.js",
     },
@@ -85,47 +86,27 @@ export default defineConfig({
     alias: {
       '@fanswoo/core': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/core/src',
-      ),
-      '@fanswoo/ajax-submit': path.resolve(
-        __dirname,
-        '../node_modules/@fanswoo/ajax-submit/src',
-      ),
-      '@fanswoo/component-loader': path.resolve(
-        __dirname,
-        '../node_modules/@fanswoo/component-loader/src',
-      ),
-      '@fanswoo/control-center': path.resolve(
-        __dirname,
-        '../node_modules/@fanswoo/control-center/src',
+        './node_modules/@fanswoo/core/src',
       ),
       '@fanswoo/controller': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/controller/src',
+        './node_modules/@fanswoo/controller/src',
       ),
       '@fanswoo/embed': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/embed/src',
-      ),
-      '@fanswoo/touch': path.resolve(
-        __dirname,
-        '../node_modules/@fanswoo/touch/src',
+        './node_modules/@fanswoo/embed/src',
       ),
       '@fanswoo/message': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/message/src',
-      ),
-      '@fanswoo/shop': path.resolve(
-        __dirname,
-        '../node_modules/@fanswoo/shop/src',
+        './node_modules/@fanswoo/message/src',
       ),
       '@fanswoo/html-editor': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/html-editor/src',
+        './node_modules/@fanswoo/html-editor/src',
       ),
       '@fanswoo/editor': path.resolve(
         __dirname,
-        '../node_modules/@fanswoo/editor/src',
+        './node_modules/@fanswoo/editor/src',
       ),
       'vue': 'vue/dist/vue.esm-bundler.js',
       // 'laravel-nova': '/../vendor/laravel/nova/resources/js/mixins/packages.js',
