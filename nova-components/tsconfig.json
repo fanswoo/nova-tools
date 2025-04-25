@@ -29,12 +29,6 @@
       "@fanswoo/embed/*": [
         "./node_modules/@fanswoo/embed/src/*"
       ],
-      "@fanswoo/touch/*": [
-        "./node_modules/@fanswoo/touch/src/*"
-      ],
-      "@fanswoo/message/*": [
-        "./node_modules/@fanswoo/message/src/*"
-      ],
       "@fanswoo/shop/*": [
         "./node_modules/@fanswoo/shop/src/*"
       ],

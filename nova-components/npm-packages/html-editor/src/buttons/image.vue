@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, inject, watch } from 'vue';
 import tippy from 'tippy.js';
-import { uploadPics } from '@fanswoo/core/vue/upload/upload-pic/upload-pic';
+import { uploadPics } from '../extentions/upload-pic';
 
 defineOptions({
   name: 'ImageButton',

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import UploadFile from '@fanswoo/core/vue/upload/upload-file/upload-file.vue';
+import UploadFile from './upload-file/upload-file.vue';
 import { FormField, DependentFormField, HandlesValidationErrors } from 'laravel-nova';
 
 defineOptions({

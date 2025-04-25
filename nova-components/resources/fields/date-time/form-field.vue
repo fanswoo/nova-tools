@@ -47,10 +47,10 @@
 </template>
 
 <script>
-import DateTimePicker from '@fanswoo/core/vue/plugins/date-picker/date-time-picker.vue';
-import DatePicker from '@fanswoo/core/vue/plugins/date-picker/date-picker.vue';
-import TimePicker from '@fanswoo/core/vue/plugins/date-picker/time-picker.vue';
-import YearMonthPicker from '@fanswoo/core/vue/plugins/date-picker/year-month-picker.vue';
+import DateTimePicker from './date-picker/date-time-picker.vue';
+import DatePicker from './date-picker/date-picker.vue';
+import TimePicker from './date-picker/time-picker.vue';
+import YearMonthPicker from './date-picker/year-month-picker.vue';
 import { DependentFormField, HandlesValidationErrors } from 'laravel-nova';
 import moment from 'moment';
 import 'moment-timezone';

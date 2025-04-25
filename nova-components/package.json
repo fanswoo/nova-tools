@@ -10,9 +10,6 @@
   "dependencies": {
     "@fanswoo/core": "file:npm-packages/core",
     "@fanswoo/html-editor": "file:npm-packages/html-editor",
-    "@fanswoo/controller": "file:npm-packages/controller",
-    "@fanswoo/embed": "file:npm-packages/embed",
-    "@fanswoo/message": "file:npm-packages/message",
     "vue-chartjs": "^5.3.1"
   },
   "devDependencies": {

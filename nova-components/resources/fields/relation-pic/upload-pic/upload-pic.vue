@@ -12,7 +12,7 @@
       @showErrorMessage="showErrorMessage"
       :isSinglePic="isSinglePic"
     />
-    <UploadList v-model="pics" :inputName="inputName"/>
+    <UploadList v-model="pics" />
   </div>
 </template>
 
@@ -20,7 +20,6 @@
 import { ref, watch, onMounted } from 'vue';
 import UploadButton from './upload-button.vue';
 import UploadList from './upload-list.vue';
-import { cloneDeep } from 'lodash';
 
 const props = defineProps({
   isSinglePic: {
@@ -30,10 +29,6 @@ const props = defineProps({
   hideUploadButton: {
     type: Boolean,
     default: false,
-  },
-  inputName: {
-    type: String,
-    default: '',
   },
   relatedPicName: {
     type: String,
@@ -57,7 +52,7 @@ const pics = defineModel<any>();
 const emit = defineEmits(['update:modelValue', 'showErrorMessage']);
 watch(pics.value, (newVal) => {
   emit('update:modelValue', newVal);
-});
+}, { deep: true });
 const showErrorMessage = (event) => {
   emit('showErrorMessage', event);
 }

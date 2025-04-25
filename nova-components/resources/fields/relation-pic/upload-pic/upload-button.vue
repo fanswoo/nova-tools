@@ -17,8 +17,7 @@
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue';
-import { Message } from '@fanswoo/message/main';
-import { uploadPics } from '@fanswoo/core/vue/upload/upload-pic/upload-pic';
+import { uploadPics } from './upload-pic';
 
 const props = defineProps({
   isSinglePic: {
@@ -73,11 +72,6 @@ const onUploadPics = async (event) => {
   message.value = props.defaultMessage;
 
   if (response.status === false) {
-    const message = Message.getInstance();
-    message.show({
-      text: response.message,
-      second: 3,
-    });
     emit('showErrorMessage', response.message);
   }
 };

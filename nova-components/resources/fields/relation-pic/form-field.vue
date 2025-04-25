@@ -19,9 +19,8 @@
 </template>
 
 <script setup lang="ts">
-import UploadPic from '@fanswoo/core/vue/upload/upload-pic/upload-pic.vue';
+import UploadPic from './upload-pic/upload-pic.vue';
 import { FormField, DependentFormField, HandlesValidationErrors } from 'laravel-nova';
-import { watch } from "vue";
 
 defineOptions({
   mixins: [FormField, DependentFormField, HandlesValidationErrors],

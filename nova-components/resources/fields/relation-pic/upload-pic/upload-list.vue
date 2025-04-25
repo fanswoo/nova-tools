@@ -39,7 +39,6 @@
                 <font-awesome-icon icon="trash" />
               </span>
             </div>
-            <input type="hidden" :name="inputName + '[]'" :value="pic.id" />
           </div>
         </template>
       </template>
@@ -51,14 +50,8 @@
 import { ref, onMounted, watch } from 'vue';
 import { VueDraggableNext as Draggable } from 'vue-draggable-next';
 
-const props = defineProps({
-  inputName: {
-    type: String,
-    default: '',
-  },
-});
-
 const pics = defineModel();
+const emit = defineEmits(['update:modelValue']);
 const message = ref('');
 const copyLinkInput = ref([]);
 const viewer = ref([]);
@@ -97,6 +90,11 @@ const copyLinkToClipboard = (index) => {
 const showPic = (index) => {
   viewer.value[index].$viewer.show();
 };
+
+// const onDragChange = (event) => {
+//   pics.value = event;
+//   emit('update:modelValue', pics.value);
+// };
 </script>
 
 

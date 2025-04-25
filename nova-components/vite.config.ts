@@ -23,7 +23,7 @@ import path from 'path';
 
 export default defineConfig({
   define: {
-    "process.env": process.env, // Vite ditched process.env, so we need to pass it in
+    "process.env": JSON.stringify(process.env), // Vite ditched process.env, so we need to pass it in
   },
   build: {
     outDir: resolve(__dirname, "dist"),
@@ -88,28 +88,11 @@ export default defineConfig({
         __dirname,
         './node_modules/@fanswoo/core/src',
       ),
-      '@fanswoo/controller': path.resolve(
-        __dirname,
-        './node_modules/@fanswoo/controller/src',
-      ),
-      '@fanswoo/embed': path.resolve(
-        __dirname,
-        './node_modules/@fanswoo/embed/src',
-      ),
-      '@fanswoo/message': path.resolve(
-        __dirname,
-        './node_modules/@fanswoo/message/src',
-      ),
       '@fanswoo/html-editor': path.resolve(
         __dirname,
         './node_modules/@fanswoo/html-editor/src',
       ),
-      '@fanswoo/editor': path.resolve(
-        __dirname,
-        './node_modules/@fanswoo/editor/src',
-      ),
       'vue': 'vue/dist/vue.esm-bundler.js',
-      // 'laravel-nova': '/../vendor/laravel/nova/resources/js/mixins/packages.js',
       '@': '/../vendor/laravel/nova/resources/js',
       '@resources': path.resolve(__dirname, '/resources'),
     },
