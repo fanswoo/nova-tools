@@ -51172,8 +51172,13 @@ img.ProseMirror-separator {
         if (this.options?.textAlign) {
           extensions.push(TextAlign.configure(this.options?.textAlign));
         } else {
+          const CustomTextAlign = TextAlign.extend({
+            addKeyboardShortcuts() {
+              return {};
+            }
+          });
           extensions.push(
-            TextAlign.configure({
+            CustomTextAlign.configure({
               types: ["heading", "paragraph"]
             })
           );
