@@ -51322,13 +51322,6 @@ img.ProseMirror-separator {
     editor.on("focus", ({ editor: editor2, event }) => {
     });
     vue.watch(() => content.value, (value) => {
-      editor.commands.setContent(
-        value,
-        false,
-        {
-          preserveWhitespace: "full"
-        }
-      );
       let { from: from2, to: to2 } = editor.state.selection;
       editor.commands.setTextSelection({ from: from2, to: to2 });
     });

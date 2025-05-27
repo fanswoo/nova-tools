@@ -54,12 +54,12 @@ const createEditor = (options) => {
   });
   
   watch(() => content.value, (value) => {
-    editor.commands.setContent(
-      value,
-      false,
-      {
-        preserveWhitespace: "full"
-      });
+    // editor.commands.setContent(
+    //   value,
+    //   false,
+    //   {
+    //     preserveWhitespace: "full"
+    //   });
     let { from, to } = editor.state.selection;
     editor.commands.setTextSelection({ from, to });
   });
