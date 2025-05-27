@@ -206,7 +206,10 @@ class HtmlEditor extends Field
                     $fillContent = json_decode($translation, true);
                     $translationContents[$locale] = $fillContent['content'];
                     if(array_key_exists('picIds', $fillContent)) {
-                        $picIds[] = $fillContent['picIds'];
+                        $picIds = [
+                            ...$picIds,
+                            ...$fillContent['picIds']
+                        ];
                     }
                 }
                 $model->setTranslations($realAttribute, $translationContents);
