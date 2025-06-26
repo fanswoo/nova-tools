@@ -214,14 +214,12 @@ class HtmlEditor extends Field
                 }
                 $model->setTranslations($realAttribute, $translationContents);
 
-                if ($picIds) {
-                    if (!array_key_exists('pics', $this->meta)) {
-                        throw new \Exception('Please set the pics relationship name first');
-                    }
-                    $model->save();
-                    $metaPics = $this->meta['pics'];
-                    $model->{$metaPics}('set', $picIds);
+                if (!array_key_exists('pics', $this->meta)) {
+                    throw new \Exception('Please set the pics relationship name first');
                 }
+                $model->save();
+                $metaPics = $this->meta['pics'];
+                $model->{$metaPics}('set', $picIds);
             } else {
                 $model->{$realAttribute} = $translations;
             }
