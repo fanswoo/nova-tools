@@ -37,7 +37,7 @@ class Owner extends BelongsTo
             ) {
                 return false;
             }
-            return !request()->user()->checkPurview($managerPermission);
+            return !request()->user()->can($managerPermission);
         });
 
         return $this;

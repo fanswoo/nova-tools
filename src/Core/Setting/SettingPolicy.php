@@ -23,7 +23,7 @@ class SettingPolicy
 
     public function update(User $user)
     {
-        return $user->checkPurview(['admin']);
+        return $user->can(['super-admin']);
     }
 
     public function delete(User $user): bool
