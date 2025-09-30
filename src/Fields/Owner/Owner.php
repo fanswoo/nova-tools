@@ -25,7 +25,7 @@ class Owner extends BelongsTo
     {
         $this->relatableQueryUsing(function (NovaRequest $request, Builder $query) use ($optionPermission, $managerPermission) {
             return $query
-                ->purview(array_merge($optionPermission, $managerPermission))
+                ->permission(array_merge($optionPermission, $managerPermission))
                 ->orWhere(function ($query) use ($request, $managerPermission) {
                     $query->where('id', $request->query('current'));
                 });
