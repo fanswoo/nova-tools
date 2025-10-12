@@ -2,7 +2,7 @@
 
 namespace FF\NovaTools\Core\Setting;
 
-use FF\User\Contracts\User;
+use App\User\User;
 
 class SettingPolicy
 {
